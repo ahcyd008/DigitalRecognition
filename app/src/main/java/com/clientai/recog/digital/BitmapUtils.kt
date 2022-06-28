@@ -21,7 +21,7 @@ object BitmapUtils {
             Log.d(TAG, "saveBitmap mkdirs result=$result")
         }
         val now = System.currentTimeMillis()
-        val timeString = SimpleDateFormat("yyyy-MM-dd_hh:mm:ss").format(now)
+        val timeString = SimpleDateFormat("yyyy_MM_dd_hh_mm_ss").format(now)
         val name = "${timeString}_${now%1000}.png"
         val saveFile = File(saveDir.absolutePath, name)
         try {
