@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">数字识别</string>
-    <string name="title_digital_recognition">Digital Recognition</string>
-    <string name="title_data_track">Data Track</string>
-    <string name="title_others">Others</string>
+    <string name="title_digital_recognition">手写识别</string>
+    <string name="title_data_track">样本收集</string>
+    <string name="title_others">其他</string>
     <string name="tfe_dc_classification_error_message" translatable="false">Error classifying drawing: %s</string>
 </resources>
