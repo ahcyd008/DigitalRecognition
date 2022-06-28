@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+/notebook/dataset
+/notebook/model
