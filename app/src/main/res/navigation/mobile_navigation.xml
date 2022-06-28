@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@+id/mobile_navigation"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.clientai.recog.digital.ui.home.DigitalRecognitionFragment"
+        android:label="@string/title_digital_recognition"
+        tools:layout="@layout/fragment_digital_recognition" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.clientai.recog.digital.ui.track.DataTrackFragment"
+        android:label="@string/title_data_track"
+        tools:layout="@layout/fragment_data_track" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.clientai.recog.digital.ui.others.OthersFragment"
+        android:label="@string/title_others"
+        tools:layout="@layout/fragment_others" />
+</navigation>
