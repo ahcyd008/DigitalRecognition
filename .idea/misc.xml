@@ -5,7 +5,7 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.4083333333333333" />
         <entry key="app/src/main/res/layout/fragment_data_track.xml" value="0.409375" />
-        <entry key="app/src/main/res/layout/fragment_digital_recognition.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_digital_recognition.xml" value="0.375" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.4083333333333333" />
         <entry key="app/src/main/res/layout/fragment_others.xml" value="0.40942028985507245" />
         <entry key="app/src/main/res/layout/sample_digital_hand_writing_input_view.xml" value="0.409375" />

@@ -56,6 +56,7 @@ class DigitalRecognitionFragment : Fragment(), View.OnClickListener {
 
         val resultArray = arrayListOf(binding.resultTop1, binding.resultTop2, binding.resultTop3, binding.resultTop4)
         this.resultArray = resultArray
+        binding.recognitionResult.visibility = View.INVISIBLE
         for (i in 0 until resultArray.size) {
             resultArray[i].visibility = View.INVISIBLE
         }
@@ -78,6 +79,7 @@ class DigitalRecognitionFragment : Fragment(), View.OnClickListener {
                                 score = result[i].score
                             }
                             // 展示 top1 和 其他 score > 0.01 的候选数字供用户选择
+                            binding.recognitionResult.visibility = View.VISIBLE
                             if (i == 0 || score >= 0.01f) {
                                 resultArray[i].visibility = View.VISIBLE
                                 resultArray[i].text = "${label}\n${UIUtils.formatDisplayFloat(score)}"
@@ -108,6 +110,7 @@ class DigitalRecognitionFragment : Fragment(), View.OnClickListener {
                 for (i in 0 until resultArray.size) {
                     resultArray[i].visibility = View.INVISIBLE
                 }
+                binding.recognitionResult.visibility = View.INVISIBLE
             }
         }
     }

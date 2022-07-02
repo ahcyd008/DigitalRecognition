@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:textSize="20sp"
-        android:text="识别结果是："
+        android:text="识别结果"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -91,7 +91,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:textSize="18sp"
-        android:text="请在上面黑板区域手写输入数字!"
+        android:text="请黑板区手写输入一个数字!"
+        android:textColor="#00ff00"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/digital_input_layout" />
     <Button
