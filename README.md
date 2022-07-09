@@ -20,7 +20,7 @@ adb pull /storage/emulated/0/Android/data/com.clientai.recog.digital/files/Track
 ```
 - 同时，数据也会被上次到一个云服务端，可以直接通过web服务访问下载，方面数据收集。云服务端参考 https://github.com/ahcyd008/DataTrackCacheServer ，目前为方便学习新建了临时云服务 http://129.204.41.76:8000/
 
-- 已采集的样本位于[notebook/dataset.zip](notebook/dataset.zip) 和 [notebook/dataset-test.zip](notebook/dataset-test.zip)
+- 已采集的样本位于[notebook/dataset.zip](notebook/dataset.zip) 和 [notebook/dataset-test.zip](notebook/dataset-test.zip)，解压后使用
 
 ### 训练模型
 
