@@ -16,3 +16,4 @@ local.properties
 /notebook/dataset
 /notebook/dataset-test
 /notebook/model
+/notebook/model-cnn

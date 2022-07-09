@@ -65,7 +65,8 @@ class DigitalClassifier(private val context: Context) {
 
     @Throws(IOException::class)
     private fun loadModelFile(assetManager: AssetManager): ByteBuffer {
-        val fileDescriptor = assetManager.openFd(MODEL_FILE)
+        val fileDescriptor = assetManager.openFd(MODEL_FILE) // 使用全连接网络模型
+        // val fileDescriptor = assetManager.openFd(MODEL_CNN_FILE) // 使用卷积神经网络模型
         val inputStream = FileInputStream(fileDescriptor.fileDescriptor)
         val fileChannel = inputStream.channel
         val startOffset = fileDescriptor.startOffset
@@ -141,7 +142,8 @@ class DigitalClassifier(private val context: Context) {
 
     companion object {
         private const val TAG = "ClientAI#Classifier"
-        private const val MODEL_FILE = "mymodel.tflite"//"mnist.tflite"
+        private const val MODEL_FILE = "mymodel.tflite"
+        private const val MODEL_CNN_FILE = "mymodel-cnn.tflite"
         private const val FLOAT_TYPE_SIZE = 4
         private const val PIXEL_SIZE = 1
         private const val OUTPUT_CLASSES_COUNT = 10
