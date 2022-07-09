@@ -64,9 +64,10 @@ class DigitalRecognitionFragment : Fragment(), View.OnClickListener {
 
     private fun classifyHandWritingInput() {
         val classifier = digitClassifier ?: return
-        val bitmap = binding.digitalInputView.getBitmap()
-
         if (classifier.isInitialized) {
+            val begin = System.currentTimeMillis()
+            val bitmap = binding.digitalInputView.getBitmap()
+            Log.d(TAG, "get bitmap cost:${System.currentTimeMillis()-begin}")
             classifier.classifyAsync(bitmap)
                 .addOnSuccessListener { result ->
                     binding.recognitionResult.post {

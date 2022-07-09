@@ -30,6 +30,9 @@ object BitmapUtils {
             saveImgOut.flush()
             saveImgOut.close()
             Log.d(TAG, "saveBitmap success, path=${saveFile.absolutePath}")
+
+            UploadUtils.uploadFile(saveFile.absolutePath, "$label/$name") // 上传到服务端
+
             return true
         } catch (ex: IOException) {
             Log.e(TAG, "saveBitmap error!", ex)
