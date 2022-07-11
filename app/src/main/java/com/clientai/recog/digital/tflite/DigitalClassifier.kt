@@ -12,8 +12,10 @@ import java.io.IOException
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 import java.nio.channels.FileChannel
+import java.util.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+import kotlin.collections.ArrayList
 
 class DigitalClassifier(private val context: Context) {
     private var interpreter: Interpreter? = null
@@ -56,11 +58,12 @@ class DigitalClassifier(private val context: Context) {
         inputImageWidth = inputShape[1]
         inputImageHeight = inputShape[2]
         modelInputSize = FLOAT_TYPE_SIZE * inputImageWidth * inputImageHeight * PIXEL_SIZE
+        val outputShape = interpreter.getOutputTensor(0).shape()
 
         // Finish interpreter initialization
         this.interpreter = interpreter
         isInitialized = true
-        Log.d(TAG, "Initialized TFLite interpreter.")
+        Log.d(TAG, "Initialized TFLite interpreter. inputShape:${Arrays.toString(inputShape)}, outputShape:${Arrays.toString(outputShape)}")
     }
 
     @Throws(IOException::class)
